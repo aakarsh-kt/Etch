@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.heading {
+    font-size: 82px;
+    color: rgba(rgb(50, 50, 180));
+    font-weight: 700;
+    filter: drop-shadow(6px 6px 3px blue);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.middle-section {
+    background-color: red;
+    /* height: 70vh; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar {
+    background-color: green;
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.other {
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.suare-buttons,.b1{
+    
+}
+
+.square-buttons {
+    height: 80px;
+    width: 80px;
+}
+
+.grid-container {
+    display: grid;
+    height: 600px;
+    width: 900px;
+    grid-template-columns: repeat(8, 98px);
+    justify-content: end;
+    /* grid-template-rows: repeat(8, 98px); */
+    /* row-gap: 0px;
+    gap: 0;
+    column-gap: 0px; */
+    /* justify-items: center; */
+
+
+}
+
+.coloor {
+    background-color: black;
+}
+
+
+button {
+    min-height: 50px;
+    min-width: 10px;
+    background-color: gold;
+}
+
+.grid-item {
+    /* display: flex; */
+    /* height: 80px; */
+    border: 1px solid black;
+    /* width: 80px; */
+    background-color: aqua;
+    /* margin: 0;
+    padding: 0; */
+    /* align-items: center;
+    justify-content: center; */
+}
