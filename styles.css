@@ -39,9 +39,9 @@ body {
     justify-content: space-evenly;
     align-items: center;
 }
-.suare-buttons,.b1{
-    
-}
+
+.suare-buttons,
+.b1 {}
 
 .square-buttons {
     height: 80px;
@@ -52,7 +52,8 @@ body {
     display: grid;
     height: 600px;
     width: 900px;
-    grid-template-columns: repeat(8, 98px);
+    grid-template-columns: repeat(8, 1fr);
+    
     justify-content: end;
     /* grid-template-rows: repeat(8, 98px); */
     /* row-gap: 0px;

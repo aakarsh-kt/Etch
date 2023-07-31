@@ -12,6 +12,16 @@ buts2.addEventListener("click", () => {
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+const but3=document.querySelector(".grid_size");
+but3.addEventListener("click",()=>{
+   let size= prompt("Enter Size");
+   for(let i=0;i<size*size;i++)
+   {
+    let div1=document.createElement('div');
+    div1.classList.add("grid-item");
+    
+   }
+})
 
 // Function to generate a random color in the format "rgb(r, g, b)"
 function getRandomColor() {
@@ -21,25 +31,25 @@ function getRandomColor() {
     return `rgb(${r}, ${g}, ${b})`;
 }
 let color = "rgb(255, 255, 255)";
-let k=0;
+let k = 0;
 
 let butcos = document.querySelector(".rainbow");
-butcos.addEventListener("click", ()=>{
-    return k++;
+butcos.addEventListener("click", () => {
+    return k == 0 ? k = 1 : k = 0;
 }
 )
 
 
 it.forEach((i) => {
-    i.addEventListener("mouseover", () => { 
-        
-        
-        if(k==0)
-        i.style.backgroundColor = color;
-        else
-        i.style.backgroundColor = getRandomColor();
+    i.addEventListener("mouseover", () => {
 
-     })
+
+        if (k == 0)
+            i.style.backgroundColor = color;
+        else
+            i.style.backgroundColor = getRandomColor();
+
+    })
 })
 
 it.forEach((i) => {
