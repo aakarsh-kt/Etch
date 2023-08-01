@@ -1,13 +1,15 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: black;
 }
 
 .heading {
     font-size: 82px;
     color: rgba(rgb(50, 50, 180));
     font-weight: 700;
-    filter: drop-shadow(6px 6px 3px blue);
+    /* background-color: black; */
+    filter: drop-shadow(6px 6px 10px red);
     text-align: center;
     margin: 0;
     padding: 0;
@@ -16,14 +18,14 @@ body {
 
 
 .middle-section {
-    background-color: red;
+    background-color: black;
     /* height: 70vh; */
     display: flex;
     justify-content: space-between;
 }
 
 .sidebar {
-    background-color: green;
+    background-color: black;
     width: 300px;
     height: auto;
     display: flex;
@@ -33,7 +35,7 @@ body {
 }
 
 .other {
-    background-color: pink;
+    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -56,7 +58,7 @@ body {
     display: grid;
     height: 600px;
     width: 900px;
-    /* grid-template-columns: repeat(8, 1fr); */
+    grid-template-columns: repeat(8, 1fr);
 
     /* grid-template-columns: repeat(var(--size), 1fr); */
     /* justify-content: end; */
@@ -65,6 +67,7 @@ body {
     gap: 0;
     column-gap: 0px; */
     /* justify-items: center; */
+
 
 
 }
@@ -77,14 +80,18 @@ body {
 button {
     min-height: 50px;
     min-width: 10px;
-    background-color: gold;
+    color:rgba(255, 0, 0, 0.719);
+    font-weight: 900;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100%;
+    filter:drop-shadow(10px 10px 5px rgba(255, 0, 0, 0.626));
 }
 
 .grid-item {
     /* display: flex; */
 
     /* height: 80px; */
-    border: 1px solid black;
+    border: 1px solid red;
     /* width: 80px; */
     background-color: aqua;
     /* margin: 0;

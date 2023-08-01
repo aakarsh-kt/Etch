@@ -1,4 +1,3 @@
-let it = document.querySelectorAll(".grid-item");
 // let allrr = document.querySelectorAll(".grid-item");
 let grd = document.querySelector(".grid-container");
 let size = 8;;
@@ -22,6 +21,14 @@ but3.addEventListener("click", () => {
     // root.style.setProperty('--size', 'size');
     for (let i = 0; i < size * size; i++) {
         let div1 = document.createElement('div');
+        if (i == 0)
+            div1.style.borderRadius = "50% 0 0 0";
+        if (i == size - 1)
+            div1.style.borderRadius = "0 50% 0 0";
+        if(i==(size*size)-size)
+        div1.style.borderRadius="0 0 0 50%";
+        if (i == size * size - 1)
+            div1.style.borderRadius = "0 0 50% 0";
         div1.classList.add("grid-item");
         grd.appendChild(div1);
     }
@@ -34,6 +41,8 @@ but3.addEventListener("click", () => {
     console.log(a);
     grd.style.gridTemplateRows = `repeat(${size},1fr)`;
 })
+let it = document.querySelectorAll(".grid-item");
+
 // document.addEventListener('DOMContentLoaded', function () {
 //     const numberOfRows = size; // Replace this with your desired number of rows
 //     console.log(size);
@@ -66,27 +75,40 @@ butcos.addEventListener("click", () => {
 )
 
 
-it.forEach((i) => {
-    i.addEventListener("mouseover", () => {
-
-
-        if (k == 0)
-            i.style.backgroundColor = color;
+grd.addEventListener("mouseover", (event) => {
+    const target = event.target;
+    if (target.classList.contains("grid-item")) {
+        // Access the dynamically created grid-item element
+        // You can perform any action you want with the element here
+        if (k === 0)
+            target.style.backgroundColor = color;
         else
-            i.style.backgroundColor = getRandomColor();
+            target.style.backgroundColor = getRandomColor();
+    }
+});
 
-    })
-})
-
-it.forEach((i) => {
-    i.addEventListener("dblclick", () => { i.style.backgroundColor = "aqua"; })
+// it.forEach((i) => {
+//     i.addEventListener("dblclick", () => { i.style.backgroundColor = "aqua"; })
+// })
+grd.addEventListener("dblclick", (event) => {
+    target = event.target;
+    if (target.classList.contains("grid-item")) {
+        target.style.backgroundColor = "aqua";
+    }
 })
 const but1 = document.querySelector(".reset");
 but1.addEventListener("click", () => {
-
-    it.forEach((i) => {
-        i.style.backgroundColor = "aqua";
+    const iti=document.querySelectorAll(".grid-item");
+    iti.forEach((i) => {
+        i.style.bac = "none";
     })
 });
 
 // addEventListener("mousedown")
+
+const borderButton = document.getElementsByClassName("b2");
+borderButton.addEventListener("click", () => {
+    it.forEach((i) => {
+        i.style.border = "none";
+    })
+})
