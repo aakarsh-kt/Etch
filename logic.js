@@ -100,7 +100,7 @@ const but1 = document.querySelector(".reset");
 but1.addEventListener("click", () => {
     const iti=document.querySelectorAll(".grid-item");
     iti.forEach((i) => {
-        i.style.bac = "none";
+        i.style.backgroundColor = "aqua";
     })
 });
 
