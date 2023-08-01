@@ -40,21 +40,26 @@ body {
     align-items: center;
 }
 
-.suare-buttons,
-.b1 {}
 
 .square-buttons {
     height: 80px;
     width: 80px;
 }
 
+/* :root {
+    --size: 8;
+  } */
+/* .my-element {
+} */
+
 .grid-container {
     display: grid;
     height: 600px;
     width: 900px;
-    grid-template-columns: repeat(8, 1fr);
-    
-    justify-content: end;
+    /* grid-template-columns: repeat(8, 1fr); */
+
+    /* grid-template-columns: repeat(var(--size), 1fr); */
+    /* justify-content: end; */
     /* grid-template-rows: repeat(8, 98px); */
     /* row-gap: 0px;
     gap: 0;
@@ -77,6 +82,7 @@ button {
 
 .grid-item {
     /* display: flex; */
+
     /* height: 80px; */
     border: 1px solid black;
     /* width: 80px; */

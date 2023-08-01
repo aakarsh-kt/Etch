@@ -1,7 +1,7 @@
 let it = document.querySelectorAll(".grid-item");
 // let allrr = document.querySelectorAll(".grid-item");
-
-
+let grd = document.querySelector(".grid-container");
+let size = 8;;
 let buts2 = document.querySelector(".b1");
 buts2.addEventListener("click", () => {
     let col = getRandomColor();
@@ -12,17 +12,43 @@ buts2.addEventListener("click", () => {
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-const but3=document.querySelector(".grid_size");
-but3.addEventListener("click",()=>{
-   let size= prompt("Enter Size");
-   for(let i=0;i<size*size;i++)
-   {
-    let div1=document.createElement('div');
-    div1.classList.add("grid-item");
-    
-   }
+const but3 = document.querySelector(".grid_size");
+but3.addEventListener("click", () => {
+    size = prompt("Enter Size", 8);
+    while (grd.firstChild) {
+        grd.removeChild(grd.firstChild);
+    }
+    // const root = document.documentElement;
+    // root.style.setProperty('--size', 'size');
+    for (let i = 0; i < size * size; i++) {
+        let div1 = document.createElement('div');
+        div1.classList.add("grid-item");
+        grd.appendChild(div1);
+    }
+    console.log(size);
+    const pp = size;
+    console.log(pp);
+    grd.style.display = "grid";
+    grd.style.gridTemplateColumns = ` repeat(${pp},1fr)`;
+    const a = grd.gridTemplateColumns;
+    console.log(a);
+    grd.style.gridTemplateRows = `repeat(${size},1fr)`;
 })
+// document.addEventListener('DOMContentLoaded', function () {
+//     const numberOfRows = size; // Replace this with your desired number of rows
+//     console.log(size);
+//     // const gridContainer = document.getElementsByClassName('grid-container');
 
+//     grd.style.gridTemplateRows = `repeat(${numberOfRows}, 1fr)`;
+// });
+// grd.style.gridTemplateColumns = "repeat(size, 1fr)";
+
+// const changeColorButton = document.querySelector(".grid_size");
+
+// changeColorButton.addEventListener('click', () => {
+
+// });
+// grd.setAttribute("style", "grid-template-columns:size;");
 // Function to generate a random color in the format "rgb(r, g, b)"
 function getRandomColor() {
     const r = getRandomNumber(0, 255);
