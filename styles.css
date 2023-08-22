@@ -1,3 +1,6 @@
+
+
+
 body {
     margin: 0;
     padding: 0;
@@ -6,10 +9,10 @@ body {
 
 .heading {
     font-size: 82px;
-    color: rgba(rgb(50, 50, 180));
+    color:rgb(165, 21, 21);
     font-weight: 700;
     /* background-color: black; */
-    filter: drop-shadow(6px 6px 10px red);
+    filter: drop-shadow(6px 6px 10px rgb(84, 37, 37));
     text-align: center;
     margin: 0;
     padding: 0;
@@ -91,7 +94,8 @@ button {
     /* display: flex; */
 
     /* height: 80px; */
-    border: 1px solid red;
+    border: none;
+    /* border: 1px solid black; */
     /* width: 80px; */
     background-color: aqua;
     /* margin: 0;
