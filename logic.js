@@ -1,12 +1,14 @@
 // let allrr = document.querySelectorAll(".grid-item");
 let grd = document.querySelector(".grid-container");
 let size = 8;;
-let buts2 = document.querySelector(".b1");
-buts2.addEventListener("click", () => {
-    let col = getRandomColor();
-    it.forEach((i) => {
-        i.style.backgroundColor = col;
-    })
+const buts2 = document.querySelector(".b1");
+const colorButton=document.querySelector(".gridColor");
+colorButton.addEventListener("click",()=>{
+    let colorOne=prompt();
+    let colorTwo=prompt();
+    let colorThree=prompt();
+
+    color=`rgb(${colorOne},${colorTwo},${colorThree})`;
 })
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -41,24 +43,9 @@ but3.addEventListener("click", () => {
     console.log(a);
     grd.style.gridTemplateRows = `repeat(${size},1fr)`;
 })
-let it = document.querySelectorAll(".grid-item");
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     const numberOfRows = size; // Replace this with your desired number of rows
-//     console.log(size);
-//     // const gridContainer = document.getElementsByClassName('grid-container');
 
-//     grd.style.gridTemplateRows = `repeat(${numberOfRows}, 1fr)`;
-// });
-// grd.style.gridTemplateColumns = "repeat(size, 1fr)";
 
-// const changeColorButton = document.querySelector(".grid_size");
-
-// changeColorButton.addEventListener('click', () => {
-
-// });
-// grd.setAttribute("style", "grid-template-columns:size;");
-// Function to generate a random color in the format "rgb(r, g, b)"
 function getRandomColor() {
     const r = getRandomNumber(0, 255);
     const g = getRandomNumber(0, 255);
@@ -75,7 +62,7 @@ butcos.addEventListener("click", () => {
 )
 
 
-grd.addEventListener("mouseover", (event) => {
+grd.addEventListener("mousemove", (event) => {
     const target = event.target;
     if (target.classList.contains("grid-item")) {
         // Access the dynamically created grid-item element
@@ -105,10 +92,32 @@ but1.addEventListener("click", () => {
 });
 
 // addEventListener("mousedown")
-
-const borderButton = document.getElementsByClassName("b2");
+let borderManager=0;
+const borderButton = document.querySelector(".b2");
 borderButton.addEventListener("click", () => {
+    
+    const tpo=document.querySelectorAll(".grid-item");
+    tpo.forEach((i) => {
+        if(borderManager===0)
+        i.style.border = "1px solid black";
+    else
+    i.style.border = "none";
+
+    })
+    if(borderManager===0)
+    borderManager=1;
+    else
+    borderManager=0;
+})
+
+
+buts2.addEventListener("click", () => {
+   
+    let col = getRandomColor();
+    const it=document.querySelectorAll(".grid-item");
     it.forEach((i) => {
-        i.style.border = "none";
+       
+        i.style.backgroundColor = col;
     })
 })
+
